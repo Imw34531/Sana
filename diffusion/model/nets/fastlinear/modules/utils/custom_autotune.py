@@ -34,7 +34,7 @@ class CustomAutotuner(Autotuner):
                 "~",
                 ".triton",
                 "best_config_cache",
-                torch.cuda.get_device_name(0).replace(" ", "_"),
+                "cpu", # Cuda may mot even be present. torch.cuda.get_device_name(0).replace(" ", "_"),
                 self.base_fn.__name__ + ".pkl",
             )
         )
